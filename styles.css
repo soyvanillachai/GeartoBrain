@@ -37,6 +37,7 @@ nav ul li a {
     color: #ff69b4;
     display: inline-block;
     transition: transform 0.3s;
+    font-weight: bold; /* Bold menu items */
 }
 
 nav ul li a:hover {
@@ -51,6 +52,10 @@ nav ul li a:hover {
     margin: 20px auto;
     max-width: 600px;
     display: none; /* Hidden by default */
+}
+
+#skills .floating-box {
+    margin-bottom: 20px;
 }
 
 section {
