@@ -55,8 +55,8 @@ nav ul li a:hover {
 }
 
 #skills .floating-box {
-    margin-bottom: 20px;
-    display: none; /* Hidden by default */
+    display: block; /* Ensures nested boxes are block elements */
+    margin-bottom: 20px; /* Adds spacing between the skill boxes */
 }
 
 section {
