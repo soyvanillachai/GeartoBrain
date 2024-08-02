@@ -44,6 +44,42 @@ nav ul li a:hover {
     transform: rotate(360deg);
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-card ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-card ul li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
 .floating-box {
     background: #ffffff;
     padding: 20px;
@@ -52,11 +88,6 @@ nav ul li a:hover {
     margin: 20px auto;
     max-width: 600px;
     display: none; /* Hidden by default */
-}
-
-#skills .floating-box {
-    display: block; /* Ensures nested boxes are block elements */
-    margin-bottom: 20px; /* Adds spacing between the skill boxes */
 }
 
 section {
