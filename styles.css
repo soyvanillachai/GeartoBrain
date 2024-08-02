@@ -4,6 +4,7 @@ body {
     color: #333;
     text-align: center;
     padding: 20px;
+    overflow-x: hidden; /* Allow vertical scrolling but hide horizontal overflow */
 }
 
 header {
@@ -34,16 +35,28 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #ff69b4;
+    display: inline-block;
+    transition: transform 0.3s;
 }
 
-section {
+nav ul li a:hover {
+    transform: rotate(360deg);
+}
+
+.floating-box {
     background: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: inline-block;
     margin: 20px auto;
     max-width: 600px;
+    display: none; /* Hidden by default */
+}
+
+section {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
 }
 
 footer {
