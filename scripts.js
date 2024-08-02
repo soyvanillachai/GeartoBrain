@@ -1,19 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     function showSection(id) {
-        // Hide all sections
+        // Hide all main sections
         const sections = document.querySelectorAll('main > section');
         sections.forEach(section => {
             section.style.display = 'none';
         });
 
-        // Show the selected section
+        // Show the selected main section
         const selectedSection = document.getElementById(id);
         if (selectedSection) {
             selectedSection.style.display = 'block';
 
-            // Show all boxes within the selected section
-            const skillBoxes = selectedSection.querySelectorAll('.floating-box');
-            skillBoxes.forEach(box => {
+            // Show all nested boxes within the selected section
+            const nestedBoxes = selectedSection.querySelectorAll('.floating-box');
+            nestedBoxes.forEach(box => {
                 box.style.display = 'block';
             });
         }
