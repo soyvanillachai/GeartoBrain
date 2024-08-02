@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     function showSection(id) {
         // Hide all sections
-        const sections = document.querySelectorAll('.floating-box');
+        const sections = document.querySelectorAll('main > section');
         sections.forEach(section => {
             section.style.display = 'none';
         });
@@ -10,13 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedSection = document.getElementById(id);
         if (selectedSection) {
             selectedSection.style.display = 'block';
-        }
 
-        // Show all boxes within the selected section
-        const skillBoxes = selectedSection.querySelectorAll('.floating-box');
-        skillBoxes.forEach(box => {
-            box.style.display = 'block';
-        });
+            // Show all boxes within the selected section
+            const skillBoxes = selectedSection.querySelectorAll('.floating-box');
+            skillBoxes.forEach(box => {
+                box.style.display = 'block';
+            });
+        }
     }
 
     function handleHashChange() {
