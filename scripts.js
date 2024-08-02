@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (selectedSection) {
             selectedSection.style.display = 'block';
         }
+
+        // Show all boxes within the selected section
+        const skillBoxes = selectedSection.querySelectorAll('.floating-box');
+        skillBoxes.forEach(box => {
+            box.style.display = 'block';
+        });
     }
 
     function handleHashChange() {
