@@ -4,6 +4,7 @@ body {
     color: #333;
     text-align: center;
     padding: 20px;
+    overflow: hidden;
 }
 
 header {
@@ -36,14 +37,44 @@ nav ul li a {
     color: #ff69b4;
 }
 
-section {
+.floating-box {
     background: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: inline-block;
     margin: 20px auto;
-    max-width: 600px;
+    max-width: 300px;
+    position: absolute;
+    animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+section {
+    display: inline-block;
+    position: relative;
 }
 
 footer {
