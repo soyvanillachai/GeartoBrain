@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('nav ul li a');
-    links.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = e.target.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        });
+    const floatingBoxes = document.querySelectorAll('.floating-box');
+    
+    floatingBoxes.forEach(box => {
+        const randomX = Math.floor(Math.random() * (window.innerWidth - box.clientWidth));
+        const randomY = Math.floor(Math.random() * (window.innerHeight - box.clientHeight));
+        box.style.left = `${randomX}px`;
+        box.style.top = `${randomY}px`;
     });
 });
